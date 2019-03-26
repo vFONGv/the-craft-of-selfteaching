@@ -13,10 +13,14 @@
 ![](images/learning-curve-spiral.png)
 
 ```python
+<<<<<<< HEAD
 # psudo-code of selfteaching in Python
 <<<<<<< HEAD
 def TeachYourSelf(anything):
 =======
+=======
+# pseudo-code of selfteaching in Python
+>>>>>>> upstream/master
 
 def teach_yourself(anything):
 >>>>>>> upstream/master
@@ -31,6 +35,10 @@ teach_yourself(coding)
 请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。
+
+2019 年 3 月 23 日，新增 Markdown 版本：
+
+> https://github.com/selfteaching/the-craft-of-selfteaching/tree/master/markdown
 
 ### 目录
 
