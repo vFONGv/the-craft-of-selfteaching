@@ -45,7 +45,7 @@
 
 当你没有学会它的时候，甚至不知道它的时候，感觉上，你不可能觉得那是个刚需 —— 因为你一直都活得好好的，甚至在你全然不知道那个东西竟然存在的情况下。
 
-你略微学了一下，没学会、没学好、或者干脆放弃了之后，在感觉上，你也同样不会觉得那是刚需。因为你不会用它，所以你当然 “用不上它”…… 你根本没办法直到你不懂正则表达式这个事实让你 “未得到” 什么（不是 “失去”，因为你不曾拥有）。
+你略微学了一下，没学会、没学好、或者干脆放弃了之后，在感觉上，你也同样不会觉得那是刚需。因为你不会用它，所以你当然 “用不上它”…… 你根本没办法知道你不懂正则表达式这个事实让你 “未得到” 什么（不是 “失去”，因为你不曾拥有）。
 
 然而，只要你花了一点力气，真的掌握了它，你会有两个 “发现”：
 
@@ -90,11 +90,11 @@
 
 这一点也经常被人利用。在新闻学里，就有著名的 “Framing Effect”：
 
-![](../images/framing-effect.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/framing-effect.png?raw=true)
 
 这个原理也经常被各路营销使用：
 
-![](../images/framing-bias.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/framing-bias.png?raw=true)
 
 很容易想象，经常被这些东西误导的人，“脑力” 欠缺到什么程度 —— 这当然也是他们全无自学能力的结果之一。
 
@@ -133,7 +133,7 @@
 > * 爸爸（妈妈），你在干什么呀？
 > * 我在学 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_（请自行填空）
 > * 那你学它干什么用啊？
-> * 等我学会就知道了…… 
+> * 等我学会就知道了……
 
 而后又过了段时间……
 
@@ -161,6 +161,7 @@
 **脚注**
 
 <a name='fn1'>[1]</a>：写这本书的时候，前后弄出来那么多 `.ipynb` 文件 —— 于是，到最后哪怕 “生成个目录” 这样看起来简单的活，若是会用正则表达式，就能几分钟完成；但若是不会，那就得逐一手工提取、排序、编辑…… 对我来说怎么可能不是**刚需**！
+
 ```python
 import re
 import os
@@ -169,13 +170,14 @@ files = [f for f in os.listdir('.') if os.path.isfile(f)]
 files.sort()
 for f in files:
     if '.ipynb' in f:
-        with open(f, 'r') as file:
+        with open(f, 'r', encoding = 'UTF-8') as file:
             str = file.read()
             pttn = r'"# (.*)"\n'
             r = re.findall(pttn, str)
             if len(r) > 0:
                 print(f'> - [{f.replace(".ipynb", "")}（**{r[0]}**）]({f})') # 生成 markdown
 ```
+
     > - [01.preface（**前言**）](01.preface.md)
     > - [02.proof-of-work（**如何证明你真的读过这本书？**）](02.proof-of-work.md)
     > - [Part.1.A.better.teachyourself（**为什么一定要掌握自学能力？**）](Part.1.A.better.teachyourself.md)
@@ -222,6 +224,5 @@ for f in files:
     > - [T-appendix.git-introduction（**Git 简介**）](T-appendix.git-introduction.md)
     > - [T-appendix.jupyter-installation-and-setup（**Jupyterlab 的安装与配置**）](T-appendix.jupyter-installation-and-setup.md)
     > - [T-appendix.symbols（**这些符号都代表什么？**）](T-appendix.symbols.md)
-
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>
